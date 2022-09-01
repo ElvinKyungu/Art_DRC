@@ -200,7 +200,7 @@ section {
 
 .header {
   position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   /* width: 100%; */
   top: 0;
   left: 0;
@@ -217,7 +217,6 @@ section {
           justify-content: space-between;
   padding: 0 9%;
   background: #0085CA;
-  
 }
 
 .header .logo {
@@ -392,7 +391,102 @@ button:focus {
   font-size: 1.4rem;
   color: #666;
 }
+/* Gallery et stylisation de la page détail */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+  padding: 10rem 2rem;
+}
+
+.home .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 42rem;
+          flex: 1 1 42rem;
+}
+
+.home .image img {
+  width: 100%;
+  border-radius: 5rem 0;
+}
+
+.home .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 42rem;
+          flex: 1 1 42rem;
+}
+
+.home .content h3 {
+  color: #EF3340;
+  font-size: 5rem;
+}
+
+.home .content p {
+  font-size: 1.4rem;
+  color: #666;
+  padding: 1rem 1rem;
+  line-height: 2.5;
+  text-transform: none;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 40px 20px 0 20px;
+}
+
+.container .heading{
+  width: 50%;
+  padding-bottom: 50px;
+}
+.container .heading h3{
+  font-size: 3em;
+  font-weight: bolder;
+  padding-bottom: 10px;
+}
+.container .box{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+}
+
+.container .box .dream{
+  display: flex;
+  flex-direction: column;
+  width: 32.5%;
+}
+
+.container .box .dream img{
+  width: 100%;
+  padding-bottom: 15px;
+  border-radius: 5px;
+}
+
+.localisation-date{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.localisation-date span{
+    padding: 0 2rem;
+    font-size: 20px;
+}
 /* FOOTER */
 .footer {
   background: #0085CA;
@@ -454,6 +548,18 @@ button:focus {
   }
 }
 
+
+@media only screen and (max-width: 643px){
+.container .heading{
+width: 100%;
+}
+
+}
+@media screen and (max-width: 376px){
+  .container .box{
+      display: block !important;
+  }
+}
 @media (max-width: 769px) {
   #menu-btn {
     display: inline-block;
@@ -480,6 +586,13 @@ button:focus {
   .header .navbar ul li ul {
     width: 100%;
     position: relative;
+  }
+  .container .box{
+    flex-direction: column;
+    }
+
+  .container .box .dream{
+      width: 100%;
   }
 
 }
